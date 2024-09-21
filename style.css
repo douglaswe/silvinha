@@ -1,0 +1,93 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.titulo {
+  font-size: 36px;
+  color: #fff;
+  margin-top: 50px;
+}
+
+#container-contagem-regressiva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contagem-item {
+  position: relative;
+  margin: 0 30px;
+}
+
+.contagem-numero {
+  font-size: 72px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.contagem-rotulo {
+  font-size: 18px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#mensagem {
+  font-size: 36px;
+  margin-top: 50px;
+  color: #000000;
+  animation: bounceIn 1s both 1s;
+  display: none;
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 24px;
+  }
+
+  .contagem-item {
+    margin: 10px;
+  }
+
+  .contagem-numero {
+    font-size: 48px; /* Reduza o tamanho da fonte para dispositivos menores */
+  }
+}
